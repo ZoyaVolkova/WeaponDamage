@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeaponDamage
 {
-    internal class WeaponDamage
+    abstract class WeaponDamage
     {
         private int roll;
         public int Roll
@@ -26,10 +26,8 @@ namespace WeaponDamage
             roll = startingRoll;
             CalculateDamage();
         }
-        protected virtual void CalculateDamage()
-        {
-            /*Переопределяется субклассом*/
-        }
+        protected abstract void CalculateDamage();
+        
 
 
         private bool magic;
